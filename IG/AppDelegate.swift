@@ -29,11 +29,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if PFUser.currentUser() != nil
         {
+            let rootViewController = self.window!.rootViewController as! UINavigationController
             print("Current user detected")
             
-            let vc = storyboard.instantiateViewControllerWithIdentifier("HomeViewController") 
+            let vc = storyboard.instantiateViewControllerWithIdentifier("tabBarController") as! UITabBarController
+            vc.selectedIndex = 2
+            rootViewController.pushViewController(vc, animated: true)
             
-            window?.rootViewController = vc
         }
         return true
     }

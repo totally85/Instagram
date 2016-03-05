@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,10 +27,11 @@ class ViewController: UIViewController {
     @IBAction func logoutPressed(sender: AnyObject)
     {
         PFUser.logOut()
-        print("User logged out")
+        print("user is logged out")
         
-        self.performSegueWithIdentifier("logoutSegue", sender: nil)
+        self.navigationController?.popViewControllerAnimated(true) //takes you back to the original view controller (login)
     }
+
 
 }
 

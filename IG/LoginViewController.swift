@@ -38,7 +38,9 @@ class LoginViewController: UIViewController {
             {
                 print ("you're logged in")
                 
-                self.performSegueWithIdentifier("loginSegue", sender: nil)
+                let vc = self.storyboard!.instantiateViewControllerWithIdentifier("tabBarController") as! UITabBarController
+                vc.selectedIndex = 2
+                self.navigationController?.pushViewController(vc, animated: true)
             }
         }
     }
@@ -61,7 +63,11 @@ class LoginViewController: UIViewController {
             {
                 print("Yay, new user")
                 
-                self.performSegueWithIdentifier("loginSegue", sender: nil)
+                print("Current user detected")
+                
+                let vc = self.storyboard!.instantiateViewControllerWithIdentifier("tabBarController") as! UITabBarController
+                vc.selectedIndex = 2
+                self.navigationController?.pushViewController(vc, animated: true)
             }
             else
             {
