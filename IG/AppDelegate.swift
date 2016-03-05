@@ -13,6 +13,7 @@ import Parse
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var storyboard = UIStoryboard(name: "Main", bundle: nil)
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -25,6 +26,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 configuration.server = "https://damp-bayou-52395.herokuapp.com/parse"
             })
         )
+        
+        if PFUser.currentUser() != nil
+        {
+            print("Current user detected")
+            
+            let vc = storyboard.instantiateViewControllerWithIdentifier("HomeViewController") 
+            
+            window?.rootViewController = vc
+        }
         return true
     }
 
