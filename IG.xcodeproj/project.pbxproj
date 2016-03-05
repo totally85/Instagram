@@ -17,6 +17,8 @@
 		CC80D08D1C89431D00FF1C51 /* IGTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80D08C1C89431D00FF1C51 /* IGTests.swift */; };
 		CC80D0981C89431E00FF1C51 /* IGUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80D0971C89431E00FF1C51 /* IGUITests.swift */; };
 		CC86F8881C894D7B003E6ECE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC86F8871C894D7B003E6ECE /* LoginViewController.swift */; };
+		CC86F88A1C8B804B003E6ECE /* CaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC86F8891C8B804B003E6ECE /* CaptureViewController.swift */; };
+		CC86F88C1C8B8079003E6ECE /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC86F88B1C8B8079003E6ECE /* TimelineViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		CC80D0971C89431E00FF1C51 /* IGUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGUITests.swift; sourceTree = "<group>"; };
 		CC80D0991C89431E00FF1C51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC86F8871C894D7B003E6ECE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CC86F8891C8B804B003E6ECE /* CaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureViewController.swift; sourceTree = "<group>"; };
+		CC86F88B1C8B8079003E6ECE /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		F2F4F2F874127F9E6E00EC84 /* Pods-IG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IG.release.xcconfig"; path = "Pods/Target Support Files/Pods-IG/Pods-IG.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,6 +159,8 @@
 			children = (
 				CC86F8871C894D7B003E6ECE /* LoginViewController.swift */,
 				CC80D0791C89431D00FF1C51 /* ViewController.swift */,
+				CC86F8891C8B804B003E6ECE /* CaptureViewController.swift */,
+				CC86F88B1C8B8079003E6ECE /* TimelineViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -399,8 +405,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC86F8881C894D7B003E6ECE /* LoginViewController.swift in Sources */,
+				CC86F88A1C8B804B003E6ECE /* CaptureViewController.swift in Sources */,
 				CC80D07A1C89431D00FF1C51 /* ViewController.swift in Sources */,
 				CC80D0781C89431D00FF1C51 /* AppDelegate.swift in Sources */,
+				CC86F88C1C8B8079003E6ECE /* TimelineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

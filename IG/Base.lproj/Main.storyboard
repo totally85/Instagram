@@ -61,7 +61,7 @@
         <!--Capture-->
         <scene sceneID="wnJ-RT-dTx">
             <objects>
-                <viewController title="Capture" id="rEc-A3-WhV" sceneMemberID="viewController">
+                <viewController title="Capture" id="rEc-A3-WhV" customClass="CaptureViewController" customModule="IG" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yme-Zm-0Fo"/>
                         <viewControllerLayoutGuide type="bottom" id="DI5-hg-u6c"/>
@@ -69,10 +69,28 @@
                     <view key="view" contentMode="scaleToFill" id="DyH-sr-po7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OzU-ka-Vye">
+                                <rect key="frame" x="34" y="69" width="252" height="175"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cdm-o2-4MU">
+                                <rect key="frame" x="34" y="252" width="252" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pps-yg-R4C">
+                                <rect key="frame" x="135" y="344" width="51" height="30"/>
+                                <state key="normal" title="Submit"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Capture" image="Camera-64" id="o0h-7D-hUp"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="capturePicture" destination="OzU-ka-Vye" id="o3p-xa-XwM"/>
+                        <outlet property="submitButton" destination="Pps-yg-R4C" id="xqF-fa-HNn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YXK-Bt-vM0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -81,7 +99,7 @@
         <!--Home-->
         <scene sceneID="bIt-B7-Bcg">
             <objects>
-                <viewController title="Home" id="tRK-TJ-Pbb" sceneMemberID="viewController">
+                <viewController title="Home" id="tRK-TJ-Pbb" customClass="TimelineViewController" customModule="IG" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4N7-zv-y25"/>
                         <viewControllerLayoutGuide type="bottom" id="WdX-BS-FFN"/>
