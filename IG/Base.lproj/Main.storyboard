@@ -50,7 +50,7 @@
                         <outlet property="signinButton" destination="fcl-Yr-1of" id="zao-Ac-tCl"/>
                         <outlet property="signupButton" destination="Yei-sO-1C1" id="n6F-1L-wG5"/>
                         <outlet property="usernameField" destination="Kvd-Zk-mLx" id="7cb-3D-vB7"/>
-                        <segue destination="Vj0-HU-038" kind="presentation" identifier="loginSegue" id="dbv-AT-3Ea"/>
+                        <segue destination="sJD-hN-lFP" kind="presentation" identifier="loginSegue" id="e2E-Mw-Z0o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -58,23 +58,36 @@
             <point key="canvasLocation" x="233" y="437"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="dlk-Ot-hy3">
+        <scene sceneID="qC1-wX-n1l">
             <objects>
-                <viewController id="Vj0-HU-038" sceneMemberID="viewController">
+                <viewController id="sJD-hN-lFP" customClass="ViewController" customModule="IG" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xto-XZ-bkt"/>
-                        <viewControllerLayoutGuide type="bottom" id="72j-8B-ECn"/>
+                        <viewControllerLayoutGuide type="top" id="f9S-pU-2ct"/>
+                        <viewControllerLayoutGuide type="bottom" id="23l-qB-i91"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="2gN-ky-bPh">
+                    <view key="view" contentMode="scaleToFill" id="64A-bk-k7n">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hN0-CI-nVe">
+                                <rect key="frame" x="127" y="203" width="67" height="30"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutPressed:" destination="sJD-hN-lFP" eventType="touchUpInside" id="Jkw-Yi-kit"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="logoutButton" destination="hN0-CI-nVe" id="rtt-VF-4te"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="logoutSegue" id="2sV-BP-VQO"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZdK-Zr-D7H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dYh-xo-8os" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="631" y="437"/>
+            <point key="canvasLocation" x="623" y="437"/>
         </scene>
     </scenes>
 </document>

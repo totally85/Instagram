@@ -124,7 +124,6 @@
 			children = (
 				CC86F8861C894D6A003E6ECE /* Views */,
 				CC80D0771C89431D00FF1C51 /* AppDelegate.swift */,
-				CC80D0791C89431D00FF1C51 /* ViewController.swift */,
 				CC80D07B1C89431D00FF1C51 /* Main.storyboard */,
 				CC80D07E1C89431D00FF1C51 /* Assets.xcassets */,
 				CC80D0801C89431D00FF1C51 /* LaunchScreen.storyboard */,
@@ -155,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				CC86F8871C894D7B003E6ECE /* LoginViewController.swift */,
+				CC80D0791C89431D00FF1C51 /* ViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
