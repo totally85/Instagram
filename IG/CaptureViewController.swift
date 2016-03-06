@@ -12,6 +12,9 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, 
 
     @IBOutlet weak var capturePicture: UIImageView!
     @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet weak var textField: UITextField!
+    
+    var post: Post!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +61,28 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, 
         dismissViewControllerAnimated(true, completion: nil)
     }
 
+    @IBAction func submitPressed(sender: AnyObject)
+    {
+        var size = CGSize(width: 320, height: 320)
+        resize(capturePicture.image!, newSize: size)
+        Post.postUserImage(capturePicture.image, withCaption: textField.text, withCompletion: nil)
+        textField.text = ""
+        self.capturePicture.image = nil
+        self.tabBarController?.selectedIndex = 0
+        
+    }
+    
+    func resize(image: UIImage, newSize: CGSize) -> UIImage {
+        let resizeImageView = UIImageView(frame: CGRectMake(0, 0, newSize.width, newSize.height))
+        resizeImageView.contentMode = UIViewContentMode.ScaleAspectFill
+        resizeImageView.image = image
+        
+        UIGraphicsBeginImageContext(resizeImageView.frame.size)
+        resizeImageView.layer.renderInContext(UIGraphicsGetCurrentContext()!)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage
+    }
        /*
     // MARK: - Navigation
 

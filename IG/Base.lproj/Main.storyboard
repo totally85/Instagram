@@ -70,9 +70,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OzU-ka-Vye">
-                                <rect key="frame" x="34" y="69" width="252" height="175"/>
-                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cdm-o2-4MU">
                                 <rect key="frame" x="34" y="252" width="252" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -81,7 +78,13 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pps-yg-R4C">
                                 <rect key="frame" x="135" y="344" width="51" height="30"/>
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitPressed:" destination="rEc-A3-WhV" eventType="touchUpInside" id="bQD-Bk-zWU"/>
+                                </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OzU-ka-Vye">
+                                <rect key="frame" x="34" y="69" width="252" height="175"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -90,6 +93,7 @@
                     <connections>
                         <outlet property="capturePicture" destination="OzU-ka-Vye" id="o3p-xa-XwM"/>
                         <outlet property="submitButton" destination="Pps-yg-R4C" id="xqF-fa-HNn"/>
+                        <outlet property="textField" destination="Cdm-o2-4MU" id="ooC-2R-PeO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YXK-Bt-vM0" userLabel="First Responder" sceneMemberID="firstResponder"/>

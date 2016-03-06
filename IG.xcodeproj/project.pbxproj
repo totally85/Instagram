@@ -19,6 +19,7 @@
 		CC86F8881C894D7B003E6ECE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC86F8871C894D7B003E6ECE /* LoginViewController.swift */; };
 		CC86F88A1C8B804B003E6ECE /* CaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC86F8891C8B804B003E6ECE /* CaptureViewController.swift */; };
 		CC86F88C1C8B8079003E6ECE /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC86F88B1C8B8079003E6ECE /* TimelineViewController.swift */; };
+		CC86F88E1C8B8A07003E6ECE /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC86F88D1C8B8A07003E6ECE /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		CC86F8871C894D7B003E6ECE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CC86F8891C8B804B003E6ECE /* CaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureViewController.swift; sourceTree = "<group>"; };
 		CC86F88B1C8B8079003E6ECE /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
+		CC86F88D1C8B8A07003E6ECE /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		F2F4F2F874127F9E6E00EC84 /* Pods-IG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IG.release.xcconfig"; path = "Pods/Target Support Files/Pods-IG/Pods-IG.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,6 +134,7 @@
 				CC80D07E1C89431D00FF1C51 /* Assets.xcassets */,
 				CC80D0801C89431D00FF1C51 /* LaunchScreen.storyboard */,
 				CC80D0831C89431D00FF1C51 /* Info.plist */,
+				CC86F88D1C8B8A07003E6ECE /* Post.swift */,
 			);
 			path = IG;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				CC86F8881C894D7B003E6ECE /* LoginViewController.swift in Sources */,
 				CC86F88A1C8B804B003E6ECE /* CaptureViewController.swift in Sources */,
 				CC80D07A1C89431D00FF1C51 /* ViewController.swift in Sources */,
+				CC86F88E1C8B8A07003E6ECE /* Post.swift in Sources */,
 				CC80D0781C89431D00FF1C51 /* AppDelegate.swift in Sources */,
 				CC86F88C1C8B8079003E6ECE /* TimelineViewController.swift in Sources */,
 			);
