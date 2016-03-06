@@ -64,12 +64,12 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBAction func submitPressed(sender: AnyObject)
     {
         var size = CGSize(width: 320, height: 320)
-        resize(capturePicture.image!, newSize: size)
-        Post.postUserImage(capturePicture.image, withCaption: textField.text, withCompletion: nil)
-        textField.text = ""
+        let resizedImage = resize(capturePicture.image!, newSize: size) 
+        Post.postUserImage(resizedImage, withCaption: textField.text) {(success: Bool, error: NSError?) -> Void in
+        self.textField.text = ""
         self.capturePicture.image = nil
         self.tabBarController?.selectedIndex = 0
-        
+        }
     }
     
     func resize(image: UIImage, newSize: CGSize) -> UIImage {
