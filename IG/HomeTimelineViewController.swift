@@ -73,14 +73,7 @@ class HomeTimelineViewController: UIViewController, UITableViewDataSource, UITab
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-       /* let cell = tableView.dequeueReusableCellWithIdentifier("IGCells", forIndexPath: indexPath) as! InstagramTableViewCell*/
-        
-        let cellIdentifier = "IGCells"
-        
-        var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! InstagramTableViewCell
-        
-    
-        cell = InstagramTableViewCell(style: UITableViewCellStyle.Value2, reuseIdentifier: cellIdentifier)
+       let cell = tableView.dequeueReusableCellWithIdentifier("IGCells", forIndexPath: indexPath) as! InstagramTableViewCell
         
         cell.getPhotoandCaption = posts![indexPath.row]
         
