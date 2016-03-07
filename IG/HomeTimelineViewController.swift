@@ -7,13 +7,26 @@
 //
 
 import UIKit
+import Parse
 
-class HomeTimelineViewController: UIViewController {
+class HomeTimelineViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
+{
 
-    override func viewDidLoad() {
+    @IBOutlet weak var tableView: UITableView!
+    
+    var posts: [PFObject]!
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
+        
+        self.getPosts()
 
         // Do any additional setup after loading the view.
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "loadList", name: "load", object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,6 +34,59 @@ class HomeTimelineViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func getPosts()
+    {
+        let query = PFQuery(className: "UserMedia")
+        query.orderByDescending("CreatedAt")
+        query.includeKey("author")
+        query.limit = 20
+        
+        query.findObjectsInBackgroundWithBlock
+        {
+            (results: [PFObject]?, error: NSError?) -> Void in
+            if error == nil
+            {
+                self.posts = results
+                self.tableView.reloadData()
+            }
+            else
+            {
+                print(error)
+            }
+        }
+    }
+    func loadList(notification: NSNotification)
+    {
+        self.getPosts()
+        self.tableView.reloadData()
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        if posts != nil{
+            return posts!.count
+        }
+        else
+        {
+            return 0
+        }
+    }
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+       /* let cell = tableView.dequeueReusableCellWithIdentifier("IGCells", forIndexPath: indexPath) as! InstagramTableViewCell*/
+        
+        let cellIdentifier = "IGCells"
+        
+        var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! InstagramTableViewCell
+        
+    
+        cell = InstagramTableViewCell(style: UITableViewCellStyle.Value2, reuseIdentifier: cellIdentifier)
+        
+        cell.getPhotoandCaption = posts![indexPath.row]
+        
+        return cell
+    }
+
 
     /*
     // MARK: - Navigation

@@ -103,7 +103,7 @@
         <!--Home-->
         <scene sceneID="bIt-B7-Bcg">
             <objects>
-                <viewController title="Home" id="tRK-TJ-Pbb" customClass="TimelineViewController" customModule="IG" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Home" id="tRK-TJ-Pbb" customClass="HomeTimelineViewController" customModule="IG" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4N7-zv-y25"/>
                         <viewControllerLayoutGuide type="bottom" id="WdX-BS-FFN"/>
@@ -116,24 +116,28 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="207" id="vH9-h0-Wpv">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="IGCell" id="rQ0-Ou-TGj" customClass="InstagramTableViewCell" customModule="IG" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="207"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vH9-h0-Wpv" id="4KO-IK-v4g">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rQ0-Ou-TGj" id="dk9-ZI-ezN">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="206"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yKV-ud-Zdk">
-                                                    <rect key="frame" x="31" y="8" width="240" height="135"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o9d-pg-fJr">
+                                                    <rect key="frame" x="40" y="8" width="240" height="128"/>
                                                 </imageView>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rL1-uQ-5T4">
-                                                    <rect key="frame" x="31" y="143" width="240" height="30"/>
-                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Caption Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9L-JI-qRH">
+                                                    <rect key="frame" x="40" y="144" width="240" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="myImage" destination="o9d-pg-fJr" id="wTa-UI-5BO"/>
+                                            <outlet property="myText" destination="m9L-JI-qRH" id="P2V-Sh-2RO"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -142,6 +146,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="homeIcon" id="O7L-SA-T8p"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="tableView" destination="tSd-k2-6ER" id="xxB-5I-CXI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QS2-JF-Z0G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

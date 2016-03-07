@@ -4,6 +4,7 @@ use_frameworks!
 
 target 'IG' do
     pod 'Parse'
+    pod 'ParseUI'
 
 end
 

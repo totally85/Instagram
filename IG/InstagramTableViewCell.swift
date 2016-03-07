@@ -7,9 +7,32 @@
 //
 
 import UIKit
+import Parse
 
 class InstagramTableViewCell: UITableViewCell {
 
+
+    @IBOutlet weak var myImage: UIImageView!
+
+    @IBOutlet weak var myText: UILabel!
+
+    
+    var getPhotoandCaption: PFObject!
+    {
+        didSet
+        {
+            self.myText.text = getPhotoandCaption["caption"] as? String
+            
+            if let userPicture = getPhotoandCaption["media"] as? PFFile
+            {
+                userPicture.getDataInBackgroundWithBlock { (imageData: NSData?, error: NSError?) -> Void in
+                    if (error == nil) {
+                        self.myImage.image = UIImage(data:imageData!)
+                    }
+                }
+            }
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

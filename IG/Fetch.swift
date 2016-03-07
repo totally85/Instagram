@@ -7,7 +7,10 @@
 //
 
 import UIKit
+import Parse
+import ParseUI
 
-class Fetch: PFObject {
+class Fetch: PFObject
+{
 
 }
